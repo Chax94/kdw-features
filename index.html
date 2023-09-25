@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+		<title>kdw features</title>
+	</head>
+	<body>
+		<div class="card">
+			<div class="card__content">
+				<div class="card__front">
+					<div class="left-section"></div>
+					<div class="right-section">
+						<button
+							id="flip-button"
+							class="btn btn-outline-dark btn-lg">
+							FLIP
+						</button>
+						<h3 class="card__title">ASKING FOR HELP</h3>
+						<div class="card__subtitle">
+							Asking for help can be difficult for several
+							reasons: 1. Fear of vulnerability: Many people worry
+							that seeking help makes them appear weak or
+							incapable, which can be uncomfortable. 2.
+							Independence: People often value their independence
+							and may hesitate to ask for help to maintain their
+							self-reliance. 3. Social stigma: Some cultures or
+							social environments discourage asking for help,
+							leading to hesitation. 4. Pride: Pride can prevent
+							individuals from seeking assistance because they
+							want to prove they can handle things on their own.
+							5. Past experiences: Negative past experiences, like
+							rejection or judgment, can make people reluctant to
+							ask for help in the future. 6. Misconceptions:
+							People may believe that asking for help burdens
+							others or that their problems aren't significant
+							enough to warrant assistance. Overcoming these
+							barriers often involves recognizing that asking for
+							help is a sign of strength, not weakness, and that
+							support from others can lead to personal growth and
+							problem-solving.
+						</div>
+					</div>
+				</div>
+
+				<div class="card__back">
+					<h3 class="card__title">Someone else's post</h3>
+					<p class="card__body">
+						Lorem ipsum, dolor sit amet consectetur adipisicing
+						elit. Ratione illo ex reiciendis! Numquam, molestiae
+						expedita nesciunt nobis et omnis laudantium sequi
+						voluptas porro ipsam minus at unde possimus eum aliquid
+						soluta fuga voluptate neque ratione temporibus iure est
+						laboriosam cumque odio? Eligendi nemo ea fugiat eius
+						deserunt veritatis rerum omnis animi reiciendis ipsum
+						quia, accusamus ratione alias laboriosam facilis
+						eveniet?
+					</p>
+					<button
+						id="reflip-button"
+						class="btn btn-outline-dark btn-lg">
+						FLIP
+					</button>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		// JavaScript code to add a class to the div when the button is clicked
+		const addButton = document.getElementById('flip-button');
+		const targetDiv = document.getElementsByClassName('card__content')[0];
+
+		addButton.addEventListener('click', function () {
+			// Add the 'highlighted' class to the div
+			targetDiv.classList.add('card__content-rotate');
+		});
+
+		// JavaScript code to add a class to the div when the button is clicked
+		const reFlip = document.getElementById('reflip-button');
+
+		reFlip.addEventListener('click', function () {
+			// Add the 'highlighted' class to the div
+			targetDiv.classList.remove('card__content-rotate');
+		});
+	</script>
+</html>
